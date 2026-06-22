@@ -3941,7 +3941,7 @@ body[data-page="home"] .nav-cta {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("../images/hero-bg.png");
+  background-image: url("../images/hero-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -8920,7 +8920,7 @@ body[data-page="home"] .menu-toggle.active span:nth-child(3) {
       rgba(247, 255, 249, 0.78),
       rgba(247, 255, 249, 0.82)
     ),
-    url("../images/portfolio-rocket-bg-desktop.png");
+    url("../images/portfolio-rocket-bg-desktop.webp");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -8960,7 +8960,7 @@ body[data-page="home"] .menu-toggle.active span:nth-child(3) {
         rgba(247, 255, 249, 0.82),
         rgba(247, 255, 249, 0.86)
       ),
-      url("../images/portfolio-rocket-bg-mobile.png");
+      url("../images/portfolio-rocket-bg-mobile.webp");
     background-size: cover;
     background-position: center top;
   }
@@ -9344,5 +9344,33 @@ img {
   .brand-logo img,
   .brand img {
     max-height: 34px;
+  }
+}
+
+/* Performance polish: smoother navigation and lighter mobile motion. */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .floating-card,
+  .hero-floating-card,
+  .floating-icon-badge,
+  .customer-review-badge,
+  .decorative-shape,
+  .large-blur,
+  .heavy-glow {
+    animation: none !important;
+  }
+
+  .hero,
+  .hero-section,
+  .malachite-hero,
+  .portfolio-section,
+  .portfolio-card-section,
+  .compact-portfolio-section,
+  .featured-portfolio-section,
+  .portfolio-page-section {
+    background-attachment: scroll !important;
   }
 }
