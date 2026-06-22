@@ -9317,3 +9317,10 @@ body[data-page="contact"] .info-grid {
     height: 16px !important;
   }
 }
+
+/* Live asset fallback: keep all images responsive if a browser applies defaults differently. */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
