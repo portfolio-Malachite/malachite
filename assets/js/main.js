@@ -1,5 +1,5 @@
 const menuToggle = document.querySelector(".menu-toggle");
-const navMenu = document.querySelector(".nav-menu");
+const navMenu = document.querySelector(".nav-menu") || document.querySelector(".nav-links");
 const navLinks = document.querySelectorAll(".nav-link, .nav-cta");
 const form = document.querySelector(".contact-form");
 const formNote = document.querySelector(".form-note");
@@ -15,16 +15,21 @@ const closeMenu = () => {
   if (!menuToggle || !navMenu) return;
   document.body.classList.remove("menu-open");
   navMenu.classList.remove("show");
+  navMenu.classList.remove("active");
+  menuToggle.classList.remove("active");
   menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Open menu");
+  menuToggle.setAttribute("aria-label", "Open Menu");
 };
 
 if (menuToggle && navMenu) {
   menuToggle.addEventListener("click", () => {
-    const isOpen = navMenu.classList.toggle("show");
+    const isOpen = !navMenu.classList.contains("active") && !navMenu.classList.contains("show");
+    navMenu.classList.toggle("show", isOpen);
+    navMenu.classList.toggle("active", isOpen);
+    menuToggle.classList.toggle("active", isOpen);
     document.body.classList.toggle("menu-open", isOpen);
     menuToggle.setAttribute("aria-expanded", String(isOpen));
-    menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    menuToggle.setAttribute("aria-label", isOpen ? "Close Menu" : "Open Menu");
   });
 }
 
