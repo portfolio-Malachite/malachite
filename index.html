@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/style.css?v=portfolio-button-compact-v2" />
+    <link rel="stylesheet" href="assets/css/style.css?v=portfolio-real-sites-v1" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
-    <script src="assets/js/main.js?v=portfolio-button-compact-v2" defer></script>
+    <script src="assets/js/main.js?v=hero-floating-cards-v1" defer></script>
   </head>
   <body data-page="home">
     <div class="site-dots" aria-hidden="true">
@@ -58,10 +58,11 @@
         </header>
 
         <div class="home-hero-content reveal">
-          <h1 id="home-hero-title">
-            Build Better
-            <span>Websites</span>
-            For Smarter Growth
+          <h1 id="home-hero-title" class="hero-title">
+            <span class="hero-line">
+              Build Better <span class="green-text">Websites</span>
+            </span>
+            <span class="hero-line">For Smarter Growth</span>
           </h1>
           <p>
             Malachite Technologies crafts high-performance websites, scalable applications, and digital solutions that
@@ -196,71 +197,74 @@
         </div>
       </section>
 
-      <section class="portfolio-showcase" id="portfolio">
-        <div class="portfolio-head reveal">
-          <h2 class="portfolio-bg-text">PORTFOLIO</h2>
-          <h3>Our Work Speaks for Itself</h3>
-          <p>A selection of projects that showcase our creativity and results.</p>
-        </div>
+      <section class="portfolio-card-section" id="portfolio">
+        <div class="portfolio-card-container">
+          <div class="portfolio-card-header reveal">
+            <span class="portfolio-card-label">OUR WORK</span>
+            <h2>Featured Projects</h2>
+            <p>
+              Explore a selection of our recent work where strategy, design,
+              and technology come together to create impact.
+            </p>
+          </div>
 
-        <div class="portfolio-wrap">
-          <article class="portfolio-project project-one reveal">
-            <div class="portfolio-frame large-frame">
-              <img src="assets/images/portfolio-1.jpg" alt="Fintech website portfolio project" loading="lazy" />
-            </div>
+          <div class="portfolio-card-grid">
+            <article class="portfolio-show-card reveal">
+              <div class="portfolio-number">01</div>
 
-            <div class="portfolio-info project-one-info">
-              <span class="project-number">01</span>
-              <p>Cashly is our newest web design, tailored specifically for the fintech sector.</p>
-
-              <div class="portfolio-tags">
-                <span>UI/UX</span>
-                <span>Web Design</span>
-                <span>Branding</span>
+              <div class="portfolio-show-image">
+                <img src="assets/images/portfolio-fabvance.jpg" alt="Fabvance Solutions website preview" loading="lazy" />
               </div>
 
-              <a href="portfolio.html" class="portfolio-view-btn">View Project <span>→</span></a>
-            </div>
-          </article>
+              <div class="portfolio-show-content">
+                <h3>Fabvance Solutions</h3>
+                <p>A modern digital solutions website designed with a clean layout, premium visuals, and service-focused user experience.</p>
 
-          <div class="portfolio-row">
-            <article class="portfolio-project project-two reveal">
-              <div class="portfolio-info small-info">
-                <span class="project-number">02</span>
-                <p>TalkZen is a language learning mobile app designed to help users learn, practice, and speak new languages.</p>
-
-                <div class="portfolio-tags">
-                  <span>UI/UX</span>
-                  <span>Mobile App</span>
-                  <span>App Design</span>
-                </div>
-
-                <a href="portfolio.html" class="portfolio-view-btn">View Project <span>→</span></a>
-              </div>
-
-              <div class="portfolio-frame small-frame">
-                <img src="assets/images/portfolio-2.jpg" alt="Mobile app UI portfolio project" loading="lazy" />
+                <a href="https://www.fabvancesolutions.com/" target="_blank" rel="noopener noreferrer" class="portfolio-show-btn">
+                  View Project <span>→</span>
+                </a>
               </div>
             </article>
 
-            <article class="portfolio-project project-three reveal">
-              <div class="portfolio-frame small-frame">
-                <img src="assets/images/portfolio-3.jpg" alt="SaaS dashboard landing page portfolio project" loading="lazy" />
+            <article class="portfolio-show-card reveal">
+              <div class="portfolio-number">02</div>
+
+              <div class="portfolio-show-image">
+                <img src="assets/images/portfolio-presentation4you.jpg" alt="Presentation4You website preview" loading="lazy" />
               </div>
 
-              <div class="portfolio-info project-three-info">
-                <span class="project-number">03</span>
-                <p>Sharing a modern SaaS landing page exploration for FileDock, a cloud-based file sharing platform.</p>
+              <div class="portfolio-show-content">
+                <h3>Presentation4You</h3>
+                <p>A creative presentation and design service website built to showcase professional solutions with a polished and clear digital presence.</p>
 
-                <div class="portfolio-tags">
-                  <span>UI/UX</span>
-                  <span>Web Design</span>
-                  <span>Branding</span>
-                </div>
-
-                <a href="portfolio.html" class="portfolio-view-btn">View Project <span>→</span></a>
+                <a href="https://presentation4you.com/" target="_blank" rel="noopener noreferrer" class="portfolio-show-btn">
+                  View Project <span>→</span>
+                </a>
               </div>
             </article>
+
+            <article class="portfolio-show-card reveal">
+              <div class="portfolio-number">03</div>
+
+              <div class="portfolio-show-image">
+                <img src="assets/images/portfolio-coming-soon.jpg" alt="Coming soon project preview" loading="lazy" />
+              </div>
+
+              <div class="portfolio-show-content">
+                <h3>Coming Soon Project</h3>
+                <p>Another selected project will be added here soon with a clean preview and project details.</p>
+
+                <a href="portfolio.html" class="portfolio-show-btn">
+                  View Project <span>→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="portfolio-view-all-wrap reveal">
+            <a href="portfolio.html" class="portfolio-view-all-btn">
+              View All Projects <span>→</span>
+            </a>
           </div>
         </div>
       </section>
