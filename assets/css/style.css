@@ -9324,3 +9324,25 @@ img {
   height: auto;
   display: block;
 }
+
+/* Live-safe logo sizing. */
+.logo img,
+.site-logo img,
+.nav-logo img,
+.brand-logo img,
+.brand img {
+  display: block;
+  max-height: 54px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .logo img,
+  .site-logo img,
+  .nav-logo img,
+  .brand-logo img,
+  .brand img {
+    max-height: 34px;
+  }
+}
