@@ -9168,7 +9168,7 @@ body[data-page="home"] .menu-toggle.active span:nth-child(3) {
   }
 }
 
-/* Contact info cards: three balanced cards after removing Business Hours. */
+/* Contact info cards: three balanced cards. */
 body[data-page="contact"] .info-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
